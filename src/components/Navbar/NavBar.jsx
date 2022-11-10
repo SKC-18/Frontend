@@ -33,9 +33,13 @@ const NavBar = () => {
               Featured
             </ListItemButton>
 
-            <ListItemButton>Market</ListItemButton>
+            <ListItemButton onClick={() => navigate("/Market")}>
+              Market
+            </ListItemButton>
 
-            <ListItemButton>Sign-In</ListItemButton>
+            <ListItemButton onClick={() => navigate("/SignIn")}>
+              Sign-In
+            </ListItemButton>
           </List>
           <div className={classes.button} />
           <IconButton aria-label="Show liked Items" color="inherit">
