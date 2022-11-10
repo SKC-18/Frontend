@@ -11,7 +11,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
-import { db } from "../firebase/firebaseConfig";
+import { db } from "../Firebase/firebaseConfig";
 
 export const productsApi = createApi({
   baseQuery: fakeBaseQuery(),
@@ -21,10 +21,10 @@ export const productsApi = createApi({
     fetchProducts: builder.query({
       async queryFn() {
         try {
-          const productRef = collection(db, "products");
+          const productRef = collection(db, " ");
           const querySnapshot = await getDocs(productRef);
           let products = [];
-          querySnapshot?.forEach((doc) => {
+          querySnapshot.forEach((doc) => {
             products.push({
               id: doc.id,
               ...doc.data(),
