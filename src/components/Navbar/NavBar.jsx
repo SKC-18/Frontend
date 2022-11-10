@@ -12,7 +12,6 @@ import {
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import useStyles from "./styles";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const classes = useStyles();
