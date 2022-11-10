@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+<<<<<<< HEAD
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Autoplay } from "swiper";
+=======
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Controller,
+  Thumbs,
+  Autoplay,
+} from "swiper";
+>>>>>>> 6b071d36683e6e0ef20249aa5dc43bb17e9aad0b
 import "swiper/swiper-bundle.css";
 import "./styles.css";
 import { Box } from "@mui/material";
@@ -16,8 +26,13 @@ function Swip() {
     slides.push(
       <SwiperSlide key={`slide-${i}`} tag="li">
         <img
+<<<<<<< HEAD
           src={`https://picsum.photos/id/${i + 1}/1500/300`}
           style={{ listStyle: "none" }}
+=======
+          src={`https://picsum.photos/id/${i + 1}/1500/500`}
+          style={{ listStyle: "none", objectFit: "cover", width: "100%" }}
+>>>>>>> 6b071d36683e6e0ef20249aa5dc43bb17e9aad0b
           alt={`Slide ${i}`}
         />
       </SwiperSlide>
@@ -53,7 +68,9 @@ function Swip() {
         wrapperTag="ul"
         controller={{ control: controlledSwiper }}
         id="main"
+        rewind={true}
         thumbs={{ swiper: thumbsSwiper }}
+        autoplay
         navigation
         pagination
         autoplay

@@ -6,13 +6,15 @@ import {
   CardActions,
   Typography,
   IconButton,
+  ListItemButton,
 } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import useStyles from "./styles.js";
-// import Products from '../Products';
+import { useNavigate } from "react-router-dom";
 
 const Product = (props) => {
   const classes = useStyles();
+
   return (
     <Card className={classes.root}>
       <CardMedia
