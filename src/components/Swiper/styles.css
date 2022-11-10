@@ -9,3 +9,8 @@
 .swiper-wrapper{
     padding-inline-start: 0;
 }
+.swipe{
+    border: 2px solid rgba(112, 79, 155, 1);
+    border-radius: 20px;
+    margin: 6% 0% 2% 0%
+}

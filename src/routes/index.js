@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import PublicRoutes from './PublicRoutes';
 // import ProtectedRoutes from './ProtectedRoutes';

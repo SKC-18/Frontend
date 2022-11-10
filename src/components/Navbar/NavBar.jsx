@@ -25,19 +25,19 @@ const NavBar = () => {
             {/* left for image if image found then cancek the name and add href  */}
 
             {/* <img src={""} alt ="Auction House" height="25px" className={classes.image} /> */}
-            <a href="/">Auction House</a>
+            <a href="/" style={{textDecoration:"none", color:'white'}}>Auction House</a>
           </Typography>
-          <div className={classes.grow} />
-          <List sx={{ display: "flex" }}>
-            <ListItemButton onClick={() => navigate("/featured")}>
+          {/* <div className={classes.grow} /> */}
+          <List sx={{ display: "flex", fontFamily:'"Roboto","Helvetica","Arial",sans-serif' }} >
+            <ListItemButton onClick={() => navigate("/featured")} className={classes.list}>
               Featured
             </ListItemButton>
 
-            <ListItemButton onClick={() => navigate("/Market")}>
+            <ListItemButton onClick={() => navigate("/Market")} className={classes.list}>
               Market
             </ListItemButton>
 
-            <ListItemButton onClick={() => navigate("/SignIn")}>
+            <ListItemButton onClick={() => navigate("/SignIn")} className={classes.list}>
               Sign-In
             </ListItemButton>
           </List>

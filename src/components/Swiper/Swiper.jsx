@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  Controller,
-  Thumbs,
-  Autoplay,
-} from "swiper";
+
+import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Autoplay } from "swiper";
+
 import "swiper/swiper-bundle.css";
 import "./styles.css";
 import { Box } from "@mui/material";
@@ -53,7 +49,7 @@ function Swip() {
   }
 
   return (
-    <Box mt={10}>
+    <Box mt={10} class="swipe">
       <Swiper
         tag="section"
         wrapperTag="ul"
@@ -76,14 +72,11 @@ function Swip() {
       </Swiper>
       <Swiper
         id="thumbs"
-        spaceBetween={5}
-        slidesPerView={3}
+        spaceBetween={2}
+        slidesPerView={1}
         onSwiper={setThumbsSwiper}
       >
         {Thumbs}
-      </Swiper>
-      <Swiper id="controller" onSwiper={setControlledSwiper}>
-        {slides2}
       </Swiper>
     </Box>
   );
