@@ -23,16 +23,17 @@ const Product = (props) => {
       >
         <CardContent>
           <div className={classes.cardContent}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h6" gutterBottom>
               {props.products.name}
+              <Typography varient="h5" style={{marginTop:'-15px'}}>
+              <h5 style={{margin:'20px 0 0px 0px'}}>Minimum Bid:</h5> {props.products.price}
             </Typography>
-            <Typography varient="h5">
-              <h5>Minimum Bid:5 lakh</h5> {props.products.price}
             </Typography>
+
           </div>
-          <Typography variant="body2" color="textSecondary">
+          {/* <Typography variant="body2" color="textSecondary">
             {props.products.describe}
-          </Typography>
+          </Typography> */}
         </CardContent>
       </CardMedia>
       <CardActions disableSpacing className={classes.cardActions}>

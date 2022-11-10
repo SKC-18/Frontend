@@ -1,4 +1,5 @@
 import { makeStyles, alpha } from '@material-ui/core/styles';
+import { ListItemButton } from '@mui/material';
 
 const drawerWidth = 0;
 
@@ -19,6 +20,14 @@ export default makeStyles((theme) => ({
     display: 'flex',
     textDecoration: 'none',
 
+  },
+  list:{
+    border:'1px solid transparent',
+    borderRadius:'20px',
+    '&:hover': {
+      backgroundColor: 'white',
+      color:'rgba(112, 79, 155, 1)'
+    },
   },
 
   image: {

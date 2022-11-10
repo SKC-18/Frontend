@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Controller, Thumbs } from "swiper";
+import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 import "./styles.css";
 import { Box } from "@mui/material";
 
-SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
+SwiperCore.use([Navigation, Pagination, Controller, Thumbs, Autoplay]);
 
 function Swip() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -16,7 +16,7 @@ function Swip() {
     slides.push(
       <SwiperSlide key={`slide-${i}`} tag="li">
         <img
-          src={`https://picsum.photos/id/${i + 1}/500/300`}
+          src={`https://picsum.photos/id/${i + 1}/1500/300`}
           style={{ listStyle: "none" }}
           alt={`Slide ${i}`}
         />
@@ -47,7 +47,7 @@ function Swip() {
   }
 
   return (
-    <Box mt={10}>
+    <Box mt={10} class="swipe">
       <Swiper
         tag="section"
         wrapperTag="ul"
@@ -56,6 +56,7 @@ function Swip() {
         thumbs={{ swiper: thumbsSwiper }}
         navigation
         pagination
+        autoplay
         spaceBetween={0}
         slidesPerView={1}
         onInit={(swiper) => console.log("Swiper initialized!", swiper)}
@@ -68,14 +69,11 @@ function Swip() {
       </Swiper>
       <Swiper
         id="thumbs"
-        spaceBetween={5}
-        slidesPerView={3}
+        spaceBetween={2}
+        slidesPerView={1}
         onSwiper={setThumbsSwiper}
       >
         {Thumbs}
-      </Swiper>
-      <Swiper id="controller" onSwiper={setControlledSwiper}>
-        {slides2}
       </Swiper>
     </Box>
   );
