@@ -12,3 +12,8 @@ https://auction-house-4924a.web.app/
 ## Notice Regarding CI/CD
 
 There is a CI/CD commands in use on the main brach so do no accept any pull requests changes or push to the main branch without checing for breaking conflicts and proper documentation.
+
+## Cause Regarding Legacy Webpack Problem
+
+Use this command before using npm start to properly set the environment.
+export NODE_OPTIONS=--openssl-legacy-provider

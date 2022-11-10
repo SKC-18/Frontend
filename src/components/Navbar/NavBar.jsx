@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import useStyles from "./styles";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const classes = useStyles();
@@ -25,19 +25,35 @@ const NavBar = () => {
             {/* left for image if image found then cancek the name and add href  */}
 
             {/* <img src={""} alt ="Auction House" height="25px" className={classes.image} /> */}
-            <a href="/" style={{textDecoration:"none", color:'white'}}>Auction House</a>
+            <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+              Auction House
+            </Link>
           </Typography>
           {/* <div className={classes.grow} /> */}
-          <List sx={{ display: "flex", fontFamily:'"Roboto","Helvetica","Arial",sans-serif' }} >
-            <ListItemButton onClick={() => navigate("/featured")} className={classes.list}>
+          <List
+            sx={{
+              display: "flex",
+              fontFamily: '"Roboto","Helvetica","Arial",sans-serif',
+            }}
+          >
+            <ListItemButton
+              onClick={() => navigate("/featured")}
+              className={classes.list}
+            >
               Featured
             </ListItemButton>
 
-            <ListItemButton onClick={() => navigate("/Market")} className={classes.list}>
+            <ListItemButton
+              onClick={() => navigate("/Market")}
+              className={classes.list}
+            >
               Market
             </ListItemButton>
 
-            <ListItemButton onClick={() => navigate("/SignIn")} className={classes.list}>
+            <ListItemButton
+              onClick={() => navigate("/SignIn")}
+              className={classes.list}
+            >
               Sign-In
             </ListItemButton>
           </List>
