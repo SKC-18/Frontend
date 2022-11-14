@@ -6,11 +6,9 @@ import {
   CardActions,
   Typography,
   IconButton,
-  ListItemButton,
 } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import useStyles from "./styles.js";
-import { useNavigate } from "react-router-dom";
 
 const Product = (props) => {
   const classes = useStyles();
@@ -27,11 +25,11 @@ const Product = (props) => {
           <div className={classes.cardContent}>
             <Typography variant="h6" gutterBottom>
               {props.products.name}
-              <Typography varient="h5" style={{marginTop:'-15px'}}>
-              <h5 style={{margin:'20px 0 0px 0px'}}>Minimum Bid:</h5> {props.products.price}
+              <Typography varient="h5" style={{ marginTop: "-15px" }}>
+                <h5 style={{ margin: "20px 0 0px 0px" }}>Minimum Bid:</h5>{" "}
+                {props.products.price}
+              </Typography>
             </Typography>
-            </Typography>
-
           </div>
           {/* <Typography variant="body2" color="textSecondary">
             {props.products.describe}
