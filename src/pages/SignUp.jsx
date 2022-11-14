@@ -178,8 +178,10 @@ export default function SignUp() {
               />
               <FormControlLabel
                 control={<Checkbox defaultunChecked />}
-                label=" I accept the terms and conditions"
+                label=" I accept the"
               />
+              <Link href="./TermsConditions"> terms and conditions </Link>
+
               <Button
                 type="submit"
                 variant="contained"
