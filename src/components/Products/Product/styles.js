@@ -5,6 +5,15 @@ export default makeStyles(() => ({
   root: {
     // maxWidth: 345, original width style
     maxWidth: '100%',
+    height:'290px',
+    border:'1px solid rgba(112, 79, 155, 1)',
+    borderRadius:'20px',
+    transition:'0.3s',
+    '&:hover': {
+      backgroundColor: 'rgba(112, 79, 155, 1)',
+      color:'white',
+      cursor:'pointer'
+    },
   },
   media: {
     height: 0,
