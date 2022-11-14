@@ -16,11 +16,12 @@ const PublicRoutes = () => {
     <Routes>
       {/* <Route path="*" element={<NotFound />} /> */}
       <Route path="/" element={ <Homepage />} />
+      <Route path="/featured" element={ <Featured/>} />
       <Route path='/signin' element={<SignIn />} />
       <Route path="/item/:id" element={ <Featured />} />
       <Route path="/market" element={ <Market />} />
       <Route path = "/signup" element ={ <SignUp />} />
-      <Route path = "/termsandconditions" element ={<TermsConditions/>} />
+      <Route path = "/termsconditions" element ={<TermsConditions/>} />
     </Routes>
   )
 
