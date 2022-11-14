@@ -4,8 +4,9 @@ import NavBar from "../components/Navbar/NavBar";
 export default function Featured() {
   return (
     <div>
-      Featured
       <NavBar />
+
+      <h1> Featured</h1>
     </div>
   );
 }

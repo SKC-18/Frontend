@@ -15,6 +15,7 @@ const PublicRoutes = () => {
     <Routes>
       {/* <Route path="*" element={<NotFound />} /> */}
       <Route path="/" element={ <Homepage />} />
+      <Route path='/featured' elements={<Featured />} />
       <Route path='/signin' element={<SignIn />} />
       <Route path="/item/:id" element={ <Featured />} />
       <Route path="/market" element={ <Market />} />
