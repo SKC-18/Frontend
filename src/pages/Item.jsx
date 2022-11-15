@@ -2,7 +2,6 @@ import { Grid, Typography } from "@material-ui/core";
 import { Box, Button } from "@mui/material";
 import React from "react";
 import NavBar from "../components/Navbar/NavBar";
-import Product from "../components/Products/Product/Product";
 import Products from "../components/Products/Products";
 
 const productDetail = {
