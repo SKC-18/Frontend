@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Autoplay } from "swiper";
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Controller,
+  Thumbs,
+  Autoplay,
+} from "swiper";
 
 import "swiper/swiper-bundle.css";
 import "./styles.css";
@@ -11,7 +17,7 @@ SwiperCore.use([Navigation, Pagination, Controller, Thumbs, Autoplay]);
 
 function Swip() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [controlledSwiper, setControlledSwiper] = useState(null);
+  const [controlledSwiper] = useState(null);
 
   const slides = [];
   for (let i = 0; i < 5; i += 1) {

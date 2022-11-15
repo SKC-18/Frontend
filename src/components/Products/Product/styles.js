@@ -12,7 +12,8 @@ export default makeStyles(() => ({
     '&:hover': {
       backgroundColor: 'rgba(112, 79, 155, 1)',
       color:'white',
-      cursor:'pointer'
+      cursor:'pointer',
+      
     },
   },
   media: {
