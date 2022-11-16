@@ -64,7 +64,7 @@ export default function SignUp() {
     }
   };
 
-  return(
+  return (
     <div>
       <Grid>
         <Paper elevation={10} style={paperStyle}>
@@ -177,7 +177,7 @@ export default function SignUp() {
                 }}
               />
               <FormControlLabel control={<Checkbox />} label=" I accept the" />
-              <Link to="/TermsConditions"> terms and conditions </Link>
+              <Link to="/TermsConditions"> Terms and Conditions </Link>
 
               <Button
                 type="submit"
