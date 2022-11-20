@@ -8,11 +8,11 @@ import {
   Button,
   InputAdornment,
   IconButton,
-  Link,
 } from "@material-ui/core";
 import BorderColorTwoToneIcon from "@mui/icons-material/BorderColorTwoTone";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
   const paperStyle = {
@@ -59,7 +59,7 @@ export default function SignUp() {
   //check  if the passwords match or not
   const handleChangeOnPassword2 = (e) => {
     setPassword2(e.target.value);
-    if (password != password2) {
+    if (password !== password2) {
       console.log("Passwords do not match ");
     }
   };
@@ -176,11 +176,8 @@ export default function SignUp() {
                   ),
                 }}
               />
-              <FormControlLabel
-                control={<Checkbox defaultunChecked />}
-                label=" I accept the"
-              />
-              <Link href="./TermsConditions"> terms and conditions </Link>
+              <FormControlLabel control={<Checkbox />} label=" I accept the" />
+              <Link to="/TermsConditions"> Terms and Conditions </Link>
 
               <Button
                 type="submit"
@@ -194,7 +191,7 @@ export default function SignUp() {
               <Typography>
                 {" "}
                 Already have an account?
-                <Link href="/SignIn"> SignIn</Link>
+                <Link to="/SignIn"> SignIn</Link>
               </Typography>
             </form>
           </Grid>

@@ -9,7 +9,7 @@ const SignIn = Loadable(lazy(()=>import('../pages/SignIn')));
 const Featured = Loadable(lazy(() => import('../pages/Featured')));
 const Market = Loadable(lazy(() => import('../pages/Market')));
 const SignUp = Loadable(lazy(() => import ('../pages/SignUp')));
-const TermsConditions = Loadable(lazy(()=>import('../pages/TermsConditions')))
+const TermsConditions = Loadable(lazy(()=> import('../pages/TermsConditions')));
 
 const PublicRoutes = () => {
   return (

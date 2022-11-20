@@ -4,7 +4,7 @@ function TermsConditions() {
   return (
     <div>
 
-export default TermsConditions
+
 <h2><strong>Terms and Conditions</strong></h2>
 
 <p>Welcome to Auction House!</p>
@@ -132,4 +132,5 @@ export default TermsConditions
     </div>
   )
 }
+export default TermsConditions
 
