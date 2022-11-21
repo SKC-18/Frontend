@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 
 
-import useStyles from "./sellProduct";
+import useStyles from "./sellp";
 
 export default function sellProduct() {
   const classes = useStyles();
