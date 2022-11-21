@@ -1,11 +1,12 @@
 import { Grid, Typography, ListItemAvatar,Avatar, ListItemText, List, ListItem } from "@material-ui/core";
-import { Box, Button, Dialog, DialogTitle, DialogActions } from "@mui/material";
+import { Box, Button, Dialog, DialogTitle, DialogActions, Container } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import React from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Products from "../components/Products/Products";
 import PropTypes from 'prop-types';
 import { blue } from '@mui/material/colors';
+import { useNavigate } from "react-router-dom";
 
 const productDetail = {
   id: 1,
@@ -58,6 +59,9 @@ const bids = ['$50,000', '$47,000'];
   };
 
   export default function Item() {
+
+    const navigate = useNavigate();
+
     const [open, setOpen] = React.useState(false);
     const [selectedValue, setSelectedValue] = React.useState(bids[1]);
   
@@ -70,6 +74,7 @@ const bids = ['$50,000', '$47,000'];
       setSelectedValue(value);
     };
   return (
+    <Container maxWidth="lg">
     <div style={{overflow:'hidden'}}>
       <NavBar />
       <Box mt={12}>
@@ -94,6 +99,10 @@ const bids = ['$50,000', '$47,000'];
       <Button variant="outlined" onClick={handleClickOpen} style={{color:'black', padding:'7px', background:'#8585b9', border:'1px solid transparent', borderRadius:'15px'}}>
         BID IT!
       </Button>
+
+      <Button variant="outlined" onClick={() => navigate("/sellProduct")} style={{color:'black', padding:'7px', background:'#8585b9', border:'1px solid transparent', borderRadius:'15px'}}>
+        Sell Your Product!
+      </Button>
       <SimpleDialog
         selectedValue={selectedValue}
         open={open}
@@ -102,8 +111,11 @@ const bids = ['$50,000', '$47,000'];
     </div>
           </Grid>
         </Grid>
-        <Products />
+        <hr/>
+        <br/>
+        <Products/>
       </Box>
     </div>
+    </Container>
   );
 }

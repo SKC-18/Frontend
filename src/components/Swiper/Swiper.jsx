@@ -12,6 +12,7 @@ import SwiperCore, {
 import "swiper/swiper-bundle.css";
 import "./styles.css";
 import { Box } from "@mui/material";
+import { ClassNames } from "@emotion/react";
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs, Autoplay]);
 
@@ -20,7 +21,7 @@ function Swip() {
   const [controlledSwiper] = useState(null);
 
   const slides = [];
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 9; i < 14; i += 1) {
     slides.push(
       <SwiperSlide key={`slide-${i}`} tag="li">
         <img
@@ -33,29 +34,29 @@ function Swip() {
   }
 
   const thumbs = [];
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 9; i < 14; i += 1) {
     thumbs.push(
-      <SwiperSlide key={`thumbs-${i}`} tag="li" style={{ listStyle: "none" }}>
-        <img src={`https://picsum.photos/id/${i}/163/100`} alt={`Slide ${i}`} />
+      <SwiperSlide key={`thumbs-${i}`} tag="li" style={{ listStyle: "none"}}>
+        <img src={`https://picsum.photos/id/${i + 1}//163/100`} alt={`Slide ${i}`} />
       </SwiperSlide>
     );
   }
 
-  const slides2 = [];
-  for (let i = 9; i < 14; i += 1) {
-    slides2.push(
-      <SwiperSlide key={`slide-${i}`} tag="li">
-        <img
-          src={`https://picsum.photos/id/${i + 1}/500/300`}
-          style={{ listStyle: "none" }}
-          alt={`Slide ${i}`}
-        />
-      </SwiperSlide>
-    );
-  }
+  // const slides2 = [];
+  // for (let i = 9; i < 14; i += 1) {
+  //   slides.push(
+  //     <SwiperSlide key={`slide-${i}`} tag="li">
+  //       <img
+  //         src={`https://picsum.photos/id/${i + 1}/500/300`}
+  //         style={{ listStyle: "none" }}
+  //         alt={`Slide ${i}`}
+  //       />
+  //     </SwiperSlide>
+  //   );
+  // }
 
   return (
-    <Box mt={10} class="swipe">
+    <Box class="swipe">
       <Swiper
         tag="section"
         wrapperTag="ul"
@@ -64,6 +65,7 @@ function Swip() {
         rewind={true}
         thumbs={{ swiper: thumbsSwiper }}
         autoplay
+        modules={[Thumbs]}
         navigation
         pagination
         spaceBetween={0}
@@ -79,10 +81,12 @@ function Swip() {
       <Swiper
         id="thumbs"
         spaceBetween={2}
-        slidesPerView={1}
+        slidesPerView={5}
+        watchSlidesProgress={true}
+        modules={[Thumbs]}
         onSwiper={setThumbsSwiper}
       >
-        {Thumbs}
+        {thumbs}
       </Swiper>
     </Box>
   );

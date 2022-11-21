@@ -11,6 +11,7 @@ const Item = Loadable(lazy(() => import('../pages/Item')));
 const Market = Loadable(lazy(() => import('../pages/Market')));
 const SignUp = Loadable(lazy(() => import ('../pages/SignUp')));
 const TermsConditions = Loadable(lazy(()=>import('../pages/TermsConditions')))
+const SellProduct = Loadable(lazy(()=>import('../pages/sellProduct')))
 
 const PublicRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const PublicRoutes = () => {
       <Route path="/market" element={ <Market />} />
       <Route path = "/signup" element ={ <SignUp />} />
       <Route path = "/termsconditions" element ={<TermsConditions/>} />
+      <Route path = "/sellProduct" element ={ <SellProduct />} />
     </Routes>
   )
 

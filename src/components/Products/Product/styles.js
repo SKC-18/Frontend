@@ -1,11 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { textAlign } from '@mui/system';
 // import { hover } from '@testing-library/user-event/dist/hover';
 
 export default makeStyles(() => ({
   root: {
     // maxWidth: 345, original width style
     maxWidth: '100%',
-    height:'290px',
+    height:'350px',
     border:'1px solid rgba(112, 79, 155, 1)',
     borderRadius:'20px',
     transition:'0.3s',
@@ -27,6 +28,13 @@ export default makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-between',
   },
+  view: {
+    '&:hover': {
+      color:'maroon',
+      cursor:'pointer',
+    },
+  },
+ 
 
   // product: {
   //   // maxWidth: 345, original width style

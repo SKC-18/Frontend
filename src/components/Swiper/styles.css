@@ -10,7 +10,12 @@
     padding-inline-start: 0;
 }
 .swipe{
-    border: 2px solid rgba(112, 79, 155, 1);
+    border: 1px solid rgb(205, 199, 212);
     border-radius: 20px;
-    margin: 6% 0% 2% 0%
+    margin: 9% 0% 2% 9%;
+    width: 80%;
+}
+.swipe-img{
+    border: 1px solid black;
+    border-radius: 20px;
 }

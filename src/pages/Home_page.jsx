@@ -3,22 +3,24 @@ import NavBar from "../components/Navbar/NavBar";
 import Products from "../components/Products/Products";
 import Swip from "../components/Swiper/Swiper";
 import { Typography } from "@mui/material";
+import { Container } from "@material-ui/core";
 
 export default function home_page() {
   return (
-    <div>
+    <Container maxWidth="lg">
       <NavBar />
       <Swip />
-      <Products />
+      <hr/>
+      <Typography>
+        <h2 style={{fontFamily:'sans-serif', fontWeight:'initial'}}>Featured</h2>
+        <Products />
+      </Typography>
       <br />
+      <hr/>
       <Typography>
-        <h1>Featured</h1>
+      <h2 style={{fontFamily:'sans-serif', fontWeight:'initial'}}>Market</h2>
         <Products />
       </Typography>
-      <Typography>
-        <h1>Market</h1>
-        <Products />
-      </Typography>
-    </div>
+    </Container>
   );
 }

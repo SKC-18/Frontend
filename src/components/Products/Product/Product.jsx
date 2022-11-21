@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import {
   Card,
   CardMedia,
@@ -13,6 +14,7 @@ import useStyles from "./styles.js";
 const Product = (props) => {
   const classes = useStyles();
 
+
   return (
     <Card className={classes.root}>
       <CardMedia
@@ -26,19 +28,19 @@ const Product = (props) => {
             <Typography variant="h6" gutterBottom>
               {props.products.name}
               <Typography varient="h5" style={{ marginTop: "-15px" }}>
-                <h5 style={{ margin: "20px 0 0px 0px" }}>Minimum Bid:</h5>{" "}
-                {props.products.price}
+                <h5 style={{ margin: "20px 0 0px 0px", border:'1px solid grey', borderRadius:'20px', padding:'7px' }}>Minimum Bid:  {props.products.price}</h5>{" "}
+                
               </Typography>
             </Typography>
           </div>
-          {/* <Typography variant="body2" color="textSecondary">
-            {props.products.describe}
-          </Typography> */}
+          <div className="timer">
+            Timer comes here
+          </div>
         </CardContent>
       </CardMedia>
       <CardActions disableSpacing className={classes.cardActions}>
         <IconButton aria-label="Add to Cart">
-          <NotificationsIcon />
+          <NotificationsIcon className={classes.view} />
         </IconButton>
       </CardActions>
     </Card>
